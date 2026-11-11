@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffc1dc">
+<meta name="theme-color" content="#bc2437">
 <title>SENATI | Iniciar sesión</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4d1838;background:#ffc1dc}
@@ -34,13 +34,39 @@ label{display:block;font-size:13px;font-weight:700;margin:22px 0 10px}
 .message{display:none;border:1px solid #df91b4;background:#fff0f6;color:#882056;padding:13px;margin-top:20px;border-radius:11px;font-size:13px}
 .message.visible{display:block}
 @media(max-width:800px){main{grid-template-columns:1fr}.intro{padding:25px;border-right:0}.hero{padding:35px 0 8px}.hero h1{font-size:49px;letter-spacing:-2px;margin:12px 0}.hero p,footer{display:none}.right{padding:25px 25px 60px}.panel{max-width:480px}}
+
+/* Fondo inspirado en el Perú: bandera y paisaje andino en el mismo HTML */
+:root{color:#44202a;background:#a71c31}
+body{background:linear-gradient(90deg,#bc2437 0%,#e64b57 32%,#fffaf7 32%,#fffaf7 100%);color:#44202a}
+.intro{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,rgba(110,11,28,.28),rgba(98,10,27,.32)),url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%201000%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sky%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%238b1528%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23de3846%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f5b3a2%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22hill%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23375c48%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23142f2b%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221200%22%20height%3D%221000%22%20fill%3D%22url(%23sky)%22%2F%3E%3Ccircle%20cx%3D%22880%22%20cy%3D%22230%22%20r%3D%22115%22%20fill%3D%22%23fff0d2%22%20opacity%3D%22.7%22%2F%3E%3Cpath%20d%3D%22M0%20620L170%20280%20315%20530%20490%20180%20720%20595%20888%20310%201100%20640%201200%20510V1000H0Z%22%20fill%3D%22%23692e43%22%2F%3E%3Cpath%20d%3D%22M330%20390L490%20180%20625%20425%20535%20350%20482%20368%20440%20310Z%22%20fill%3D%22%23fee9dc%22%20opacity%3D%22.83%22%2F%3E%3Cpath%20d%3D%22M0%20725L240%20500%20480%20690%20740%20440%201200%20740V1000H0Z%22%20fill%3D%22%23315a52%22%2F%3E%3Cpath%20d%3D%22M0%20850L200%20670%20360%20800%20590%20650%20820%20840%201030%20650%201200%20810V1000H0Z%22%20fill%3D%22url(%23hill)%22%2F%3E%3Cg%20fill%3D%22%23c5a681%22%20opacity%3D%22.95%22%3E%3Cpath%20d%3D%22M320%20750h72v-62h70v62h95v-90h75v90h100v45H320Z%22%2F%3E%3Cpath%20d%3D%22M375%20687v-40h78v40Zm183-28v-50h60v50Z%22%2F%3E%3Cpath%20d%3D%22M300%20795h460v30H300Z%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f6e7cf%22%20stroke-width%3D%225%22%20opacity%3D%22.65%22%3E%3Cpath%20d%3D%22M270%20825h530M370%20752h250M320%20779h440%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center center/cover no-repeat;border-right:0;color:white}
+.intro:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(63,8,20,.48),rgba(63,8,20,.12));z-index:-1}
+.brand,.brand small,.hero p,footer{color:#fff}
+.logo{background:#fff;color:#b51f35}
+.eyebrow{color:#ffe8d4}
+.hero h1 span{color:#ffe3d9}
+.hero h1{text-shadow:0 3px 18px #3910196b}
+.hero p{color:#ffebee}
+.right{background:linear-gradient(160deg,#fffdfb,#fff0ec)}
+.icon{background:#fff2ed;border-color:#f2d0ca;color:#b71f38}
+.over{color:#b71f38}
+.description,.notice{color:#78535a}
+.field{background:#fff;border-color:#e6c9c6}
+.field:focus-within{border-color:#ba2844;outline:3px solid #b52a4523}
+.field input{color:#44202a}
+.field input::placeholder{color:#a88b91}
+.show{color:#b71f38}
+.primary{background:#b91e38;color:white}
+.primary:hover{background:#921a2d}
+.message{background:#fff3f3;color:#98233b;border-color:#e6b5bd}
+@media(max-width:800px){.intro{min-height:275px}.right{background:#fffaf8}}
+
 </style>
 </head>
 <body>
 <main>
 <section class="intro">
 <div class="brand"><span class="logo">S</span><span>SENATI<small>PLATAFORMA</small></span></div>
-<div class="hero"><div class="eyebrow">BIENVENIDO A TU ESPACIO</div><h1>Tu espacio.<br><span>Tu futuro.</span></h1><p>Un lugar para tus proyectos, ideas y nuevas experiencias de aprendizaje.</p></div>
+<div class="hero"><div class="eyebrow">INSPIRADO EN EL PERÚ</div><h1>Tu espacio.<br><span>Tu futuro.</span></h1><p>Un lugar para tus proyectos, ideas y nuevas experiencias de aprendizaje.</p></div>
 <footer>© <span id="year"></span> SENATI · Proyecto académico</footer>
 </section>
 <section class="right">
