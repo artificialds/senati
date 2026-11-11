@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-:root{color-scheme:dark;--bg:#09090d;--surface:#121217;--line:#2a2933;--text:#f6f4fa;--muted:#9995a6;--purple:#a78bfa}
+:root{color-scheme:dark;--bg:#ffde59;--surface:#fff2b3;--line:#d1a735;--text:#28200b;--muted:#6b5523;--purple:#b77b00}
 *{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden}
 .glow{position:fixed;pointer-events:none;border-radius:50%;filter:blur(100px);opacity:.24}.glow-left{width:430px;height:430px;left:-200px;bottom:-180px;background:#6d28d9}.glow-right{width:370px;height:370px;right:-200px;top:-170px;background:#503285}
 .layout{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;position:relative}.intro{display:flex;flex-direction:column;padding:48px clamp(30px,7vw,110px);border-right:1px solid #24232b;background:radial-gradient(circle at 55% 57%,#171020 0,transparent 58%)}
@@ -8,3 +8,17 @@
 .form-side{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 28px}.login-card{width:100%;max-width:400px}.card-icon{display:grid;place-items:center;width:50px;height:50px;border:1px solid #3c3449;border-radius:15px;background:#1b1725;color:#c4aaff;font-size:26px;margin-bottom:35px}.overline{margin-bottom:12px}h2{font-size:39px;line-height:1.1;margin:0 0 12px}.card-description{font-size:14px;color:var(--muted);line-height:1.7;margin:0 0 34px}label{display:block;font-size:12px;font-weight:700;margin:23px 0 10px}.field{height:53px;border:1px solid #33313d;background:#141319;border-radius:11px;display:flex;align-items:center;padding:0 15px;gap:12px;transition:border .2s}.field:focus-within{border-color:#9d82e8;box-shadow:0 0 0 3px #8b5cf61d}.field>span{color:#8e879e;font-size:20px}.field input{background:none;border:0;outline:0;color:#fff;width:100%;height:100%;font:inherit;font-size:13px;min-width:0}.field input::placeholder{color:#6e6878}.show-password{background:none;border:0;color:#a99ec3;cursor:pointer;font-size:12px}.primary{display:flex;align-items:center;justify-content:center;position:relative;width:100%;height:54px;background:#a78bfa;color:#180d2a;border:0;border-radius:11px;font-weight:800;font-size:14px;cursor:pointer;margin-top:30px;transition:background .2s,transform .2s}.primary:hover{background:#c4b5fd;transform:translateY(-1px)}.primary span{position:absolute;right:18px;font-size:20px}.bottom-help,.hint{text-align:center;font-size:11px;color:#837c90;margin-top:23px}.hint{text-align:left;margin-top:9px}.form-footer{font-size:9px;letter-spacing:.2em;color:#656171;position:absolute;bottom:35px}.error{padding:13px;border:1px solid #784250;background:#301b23;color:#ffd2da;border-radius:9px;font-size:12px}.success{padding:14px;background:#192b24;color:#b4efce;border-radius:9px;font-size:13px}
 @media(max-width:850px){.layout{grid-template-columns:1fr}.intro{min-height:260px;padding:28px 25px;border:0}.brand{font-size:18px}.hero{margin:50px 0 15px}.hero h1{font-size:44px;margin:15px 0}.hero p,.hero-rule,.hero-meta,.footer-note{display:none}.form-side{padding:40px 25px 80px}.login-card{max-width:430px}.form-footer{position:static;margin-top:50px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Tema amarillo SENATI: reemplaza el fondo oscuro sin modificar la estructura */
+body{background:#ffde59;color:#28200b}
+.glow-left{background:#ffc400;opacity:.32}.glow-right{background:#ffef8b;opacity:.38}
+.intro{background:radial-gradient(circle at 55% 57%,#fff1a0 0,transparent 58%);border-right-color:#d9b849}
+.brand{color:#29200b}.brand-mark{background:linear-gradient(140deg,#fff8c5,#edb900);color:#29200b}.brand small,.footer-note{color:#765f25}
+.eyebrow,.overline{color:#735400}.signal{background:#775800;box-shadow:0 0 10px #e9a800}
+h1 em{background:linear-gradient(90deg,#a66b00,#5a4200);background-clip:text;color:transparent}
+.hero p{color:#634e1b}.hero-rule{background:#d4ac38}.hero-meta{color:#745b24}
+.card-icon{border-color:#d6b13e;background:#fff1b5;color:#6e4a00}
+.card-description{color:#6b5523}.field{border-color:#d0ad44;background:#fff8d7}.field:focus-within{border-color:#9c780b;box-shadow:0 0 0 3px #ae840027}
+.field>span,.show-password{color:#846625}.field input{color:#251c08}.field input::placeholder{color:#907849}
+.primary{background:#25200f;color:#fff4c7}.primary:hover{background:#4c390e}
+.bottom-help,.hint,.form-footer{color:#755f2b}.error{background:#ffe0c2;color:#6e2e10;border-color:#d78d5c}.success{background:#e0f0bc;color:#385319}
