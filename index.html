@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffc1dc">
+<title>SENATI | Iniciar sesión</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4d1838;background:#ffc1dc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 82%,#ff9cc9 0,transparent 38%),radial-gradient(circle at 90% 5%,#ffe7f2 0,transparent 36%),#ffc1dc}
+main{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
+.intro{padding:52px clamp(30px,6vw,100px);display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid #e89fbe}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:2px;font-size:23px}
+.logo{display:grid;place-items:center;background:#a92e70;color:white;border-radius:13px;width:47px;height:47px;font-size:28px}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:3px;color:#93617d}
+.hero{padding:60px 0}.eyebrow{letter-spacing:3px;color:#a92e70;font-size:11px;font-weight:800}.hero h1{font-size:clamp(54px,6vw,100px);letter-spacing:-5px;line-height:1.05;margin:25px 0}.hero h1 span{color:#ad3477}.hero p{color:#80516b;max-width:370px;line-height:1.8}
+footer{font-size:12px;color:#855570}
+.right{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 24px}
+.panel{width:100%;max-width:410px}
+.icon{width:54px;height:54px;border-radius:15px;border:1px solid #e9a1c2;display:grid;place-items:center;background:#ffeaf3;color:#a92e70;font-size:26px;margin-bottom:30px}
+.over{font-size:11px;letter-spacing:3px;font-weight:800;color:#ab3476}
+h2{font-size:40px;letter-spacing:-2px;margin:12px 0}
+.description{font-size:14px;color:#81526e;line-height:1.7;margin-bottom:32px}
+label{display:block;font-size:13px;font-weight:700;margin:22px 0 10px}
+.field{display:flex;align-items:center;background:#fff3f8;border:1px solid #e8a2c2;border-radius:12px;height:54px;padding:0 16px}
+.field:focus-within{outline:3px solid #bd3a7b30;border-color:#b7357a}
+.field input{min-width:0;flex:1;background:transparent;border:0;outline:0;color:#4d1838;font-size:14px}
+.field input::placeholder{color:#a98196}
+.show{border:0;background:transparent;color:#ad3477;font-weight:700;cursor:pointer}
+.primary{background:#a92e70;color:white;border:0;width:100%;border-radius:12px;padding:18px;font-weight:800;margin-top:30px;cursor:pointer;font-size:14px}
+.primary:hover{background:#882056}
+.notice{font-size:12px;color:#855570;text-align:center;margin-top:24px}
+.message{display:none;border:1px solid #df91b4;background:#fff0f6;color:#882056;padding:13px;margin-top:20px;border-radius:11px;font-size:13px}
+.message.visible{display:block}
+@media(max-width:800px){main{grid-template-columns:1fr}.intro{padding:25px;border-right:0}.hero{padding:35px 0 8px}.hero h1{font-size:49px;letter-spacing:-2px;margin:12px 0}.hero p,footer{display:none}.right{padding:25px 25px 60px}.panel{max-width:480px}}
+</style>
+</head>
+<body>
+<main>
+<section class="intro">
+<div class="brand"><span class="logo">S</span><span>SENATI<small>PLATAFORMA</small></span></div>
+<div class="hero"><div class="eyebrow">BIENVENIDO A TU ESPACIO</div><h1>Tu espacio.<br><span>Tu futuro.</span></h1><p>Un lugar para tus proyectos, ideas y nuevas experiencias de aprendizaje.</p></div>
+<footer>© <span id="year"></span> SENATI · Proyecto académico</footer>
+</section>
+<section class="right">
+<div class="panel">
+<div class="icon" aria-hidden="true">✦</div>
+<div class="over">ACCESO A LA PLATAFORMA</div>
+<h2>Iniciar sesión</h2>
+<p class="description">Ingresa tus datos para continuar.</p>
+<form id="login">
+<label for="user">Usuario</label>
+<div class="field"><input id="user" name="user" type="text" placeholder="Tu nombre de usuario" autocomplete="username" required></div>
+<label for="pass">Contraseña</label>
+<div class="field"><input id="pass" name="pass" type="password" placeholder="Tu contraseña" autocomplete="current-password" required><button type="button" class="show" id="toggle" aria-label="Mostrar contraseña">Ver</button></div>
+<button class="primary" type="submit">Ingresar →</button>
+<div class="message" id="message" role="status"></div>
+</form>
+<p class="notice">Vista de demostración: no hay autenticación conectada.</p>
+</div>
+</section>
+</main>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('toggle').addEventListener('click',function(){const f=document.getElementById('pass');const show=f.type==='password';f.type=show?'text':'password';this.textContent=show?'Ocultar':'Ver';});
+document.getElementById('login').addEventListener('submit',function(e){e.preventDefault();const msg=document.getElementById('message');msg.textContent='El diseño está listo. Para permitir el ingreso real de usuarios, necesitas conectar un servicio de autenticación.';msg.classList.add('visible');document.getElementById('pass').value='';});
+</script>
+</body>
+</html>
