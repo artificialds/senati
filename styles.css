@@ -22,3 +22,18 @@ h1 em{background:linear-gradient(90deg,#a66b00,#5a4200);background-clip:text;col
 .field>span,.show-password{color:#846625}.field input{color:#251c08}.field input::placeholder{color:#907849}
 .primary{background:#25200f;color:#fff4c7}.primary:hover{background:#4c390e}
 .bottom-help,.hint,.form-footer{color:#755f2b}.error{background:#ffe0c2;color:#6e2e10;border-color:#d78d5c}.success{background:#e0f0bc;color:#385319}
+
+/* Tema rosado: actualización solicitada */
+:root{--bg:#ffc1dc;--surface:#fff0f6;--line:#e9a1c2;--text:#4d1838;--muted:#855570;--purple:#bc397c}
+body{background:#ffc1dc;color:#4d1838}
+.glow-left{background:#f564aa;opacity:.32}.glow-right{background:#ffe5f1;opacity:.48}
+.intro{background:radial-gradient(circle at 55% 57%,#ffe2ef 0,transparent 58%);border-right-color:#ec9ebf}
+.brand{color:#4d1838}.brand-mark{background:linear-gradient(140deg,#ffebf3,#ec74ad);color:#4d1838}.brand small,.footer-note{color:#89516f}
+.eyebrow,.overline{color:#a52c6b}.signal{background:#d83487;box-shadow:0 0 10px #ee81b7}
+h1 em{background:linear-gradient(90deg,#d63e8f,#973369);background-clip:text;color:transparent}
+.hero p{color:#82516d}.hero-rule{background:#e9a4c5}.hero-meta{color:#8c5b76}
+.card-icon{border-color:#e7a4c5;background:#ffe6f1;color:#b43275}
+.card-description{color:#855570}.field{border-color:#e7a6c5;background:#fff3f8}.field:focus-within{border-color:#bd3a7b;box-shadow:0 0 0 3px #ce408227}
+.field>span,.show-password{color:#9c557b}.field input{color:#4d1838}.field input::placeholder{color:#ae7c97}
+.primary{background:#a92e70;color:#fff5fa}.primary:hover{background:#862456}
+.bottom-help,.hint,.form-footer{color:#8e5572}.error{background:#ffe0e5;color:#82304b;border-color:#df8da5}.success{background:#e2f4e5;color:#286143}
